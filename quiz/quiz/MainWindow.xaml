@@ -16,56 +16,67 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <StackPanel Orientation="Horizontal">
-            <Button x:Name="buttonsave"  Margin="10" Padding="10" Content="Zapisz quizy do pliku" Click="button_Save"/>
-            <Button x:Name="button"  Margin="10" Padding="10" Content="wczytaj quizy z pliku" Click="button_Read"/>
+        <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Background="#a4b0be" >
+            <Button x:Name="buttonsave" Margin="40 8" Padding="10 2" Content="Zapisz quiz " Click="button_Save" Background="#2ed573"/>
+            <Button x:Name="button"  Margin="20 8" Padding="10 2" Content="wczytaj quiz" Click="button_Read" Background="#2ed573"/>
         </StackPanel>
-        <StackPanel Grid.Column="1" Grid.Row="1">
+        <StackPanel Grid.Column="1" Grid.Row="1" Background="#70a1ff">
             <StackPanel HorizontalAlignment="Center">
                 <TextBlock>lista quizów</TextBlock>
             </StackPanel>
-            <ListBox x:Name="listBoxquizy" Grid.Column="1" Margin="10">
+            <ListBox x:Name="listBoxquizy" Grid.Column="1" Margin="10" Background="#dfe4ea">
                 <ListBoxItem>quiz1</ListBoxItem>
                 <ListBoxItem>quiz2</ListBoxItem>
             </ListBox>
             <StackPanel HorizontalAlignment="Center">
                 <TextBlock>lista pytań w danym quizie</TextBlock>
             </StackPanel>
-            <ListBox x:Name="listBoxPytania" Grid.Column="1" Margin="10">
+            <ListBox x:Name="listBoxPytania" Grid.Column="1" Margin="10" Background="#dfe4ea">
                 <ListBoxItem>ListBox Item #1</ListBoxItem>
                 <ListBoxItem>ListBox Item #2</ListBoxItem>
             </ListBox>
             <Label Content="Podaj nazwe nowego quizu"/>
-            <TextBlock x:Name="textBox6" Margin="5"/>
-            <Button x:Name="buttonQest"  Margin="10" Padding="10" Content="Doadaj nowy quiz" Click="button_Quest"/>
+            <TextBox x:Name="textBox6" Margin="5" Background="#eccc68"/>
+            <Button x:Name="buttonQest"  Margin="10" Padding="10" Content="Doadaj nowy quiz" Click="button_Quest" Background="#eccc68"/>
         </StackPanel>
-        <StackPanel Grid.Column="0" Grid.Row="1">
-            
-            <Label Content="tresc pytania"/>
-            <TextBlock x:Name="textBox0" Margin="5"/>
-            <Label Content="odpowiedz a"/>
-            <TextBlock x:Name="textBox1" Margin="5"/>
+        <StackPanel Grid.Column="0" Grid.Row="1" Background="#70a1ff">
 
-            <Label Content="odpowiedz b"/>
-            <TextBlock x:Name="textBox2" Margin="5"/>
+            <TextBlock TextAlignment="Center">Podaj pytanie</TextBlock>
+            <TextBox x:Name="textBox0" Margin="5" Background="#ced6e0"/>
 
-            <Label Content="odpowiedz c"/>
-            <TextBlock x:Name="textBox3" Margin="5"/>
+            <CheckBox x:Name="cb1"
+                Content="odpowiedz a" IsThreeState="True"
+                Checked="HandleCheck" Unchecked="HandleUnchecked" 
+                Indeterminate="HandleThirdState" />
+            <TextBox x:Name="textBox1" Margin="5"  Background="#ced6e0"/>
 
-            <Label Content="odpowiedz d"/>
-            <TextBlock x:Name="textBox4" Margin="5"/>
+            <CheckBox x:Name="cb2" 
+                Content="odpowiedz b" IsThreeState="True"
+                Checked="HandleCheck" Unchecked="HandleUnchecked" 
+                Indeterminate="HandleThirdState" />
+            <TextBox x:Name="textBox2" Margin="5"  Background="#ced6e0"/>
 
-            <Label Content="poprawna odpowiedz"/>
-            <TextBlock x:Name="textBox5" Margin="5"/>
+            <CheckBox x:Name="cb3" 
+                Content="odpowiedz c" IsThreeState="True"
+                Checked="HandleCheck" Unchecked="HandleUnchecked" 
+                Indeterminate="HandleThirdState" />
+            <TextBox x:Name="textBox3" Margin="5"  Background="#ced6e0"/>
 
-            
+            <CheckBox x:Name="cb4" 
+                Content="odpowiedz d" IsThreeState="True"
+                Checked="HandleCheck" Unchecked="HandleUnchecked" 
+                Indeterminate="HandleThirdState" />
+            <TextBox x:Name="textBox4" Margin="5"  Background="#ced6e0"/>
+
+            <TextBlock TextAlignment="Center">za pomocą checkboxa zaznacz poprawne odpowiedzi</TextBlock>
+
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button x:Name="buttonAdd"  Margin="10" Padding="10" Content="doadaj" Click="button_Add"/>
-                <Button x:Name="buttonDel"  Margin="10" Padding="10" Content="usun" Click="button_Del"/>
-                <Button x:Name="buttonEdit"  Margin="10" Padding="10" Content="edytuj" Click="button_Edit"/>
+                <Button x:Name="buttonAdd"  Margin="10" Padding="10" Content="doadaj" Click="button_Add" Background="#7bed9f"/>
+                <Button x:Name="buttonDel"  Margin="10" Padding="10" Content="usun" Click="button_Del" Background="#ff6b81"/>
+                <Button x:Name="buttonEdit"  Margin="10" Padding="10" Content="edytuj" Click="button_Edit" Background="#a4b0be"/>
             </StackPanel>
         </StackPanel>
     </Grid>
-    
+
 
 </Window>
