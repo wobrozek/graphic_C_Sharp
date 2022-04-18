@@ -25,27 +25,30 @@ namespace quiz
             InitializeComponent();
         }
 
-        public void button_Save(object sender, RoutedEventArgs e)
+        public void Button_Save(object sender, RoutedEventArgs e)
         {
 
         }
-        public void button_Read(object sender, RoutedEventArgs e)
+        public void Button_Read(object sender, RoutedEventArgs e)
         {
 
         }
-        public void button_Add(object sender, RoutedEventArgs e)
+        public void HandleCheck(object sender, RoutedEventArgs e)
+        {
+        }
+        public void Button_Add(object sender, RoutedEventArgs e)
         {
 
         } 
-        public void button_Edit(object sender, RoutedEventArgs e)
+        public void Button_Edit(object sender, RoutedEventArgs e)
         {
 
         } 
-        public void button_Del(object sender, RoutedEventArgs e)
+        public void Button_Del(object sender, RoutedEventArgs e)
         {
 
         }
-        public void button_Quest(object sender, RoutedEventArgs e)
+        public void Button_Quest(object sender, RoutedEventArgs e)
         {
 
         }

@@ -35,37 +35,35 @@
                 <ListBoxItem>ListBox Item #1</ListBoxItem>
                 <ListBoxItem>ListBox Item #2</ListBoxItem>
             </ListBox>
-            <Label Content="Podaj nazwe nowego quizu"/>
-            <TextBox x:Name="textBox6" Margin="5" Background="#eccc68"/>
             <Button x:Name="buttonQest"  Margin="10" Padding="10" Content="Doadaj nowy quiz" Click="button_Quest" Background="#eccc68"/>
         </StackPanel>
         <StackPanel Grid.Column="0" Grid.Row="1" Background="#70a1ff">
 
-            <TextBlock TextAlignment="Center">Podaj pytanie</TextBlock>
+            <TextBlock TextAlignment="Center">Pytanie</TextBlock>
             <TextBox x:Name="textBox0" Margin="5" Background="#ced6e0"/>
 
             <CheckBox x:Name="cb1"
-                Content="odpowiedz a" IsThreeState="True"
-                Checked="HandleCheck" Unchecked="HandleUnchecked" 
-                Indeterminate="HandleThirdState" />
+                Content="odpowiedz a" 
+                Checked="HandleCheck"  
+                 />
             <TextBox x:Name="textBox1" Margin="5"  Background="#ced6e0"/>
 
             <CheckBox x:Name="cb2" 
-                Content="odpowiedz b" IsThreeState="True"
-                Checked="HandleCheck" Unchecked="HandleUnchecked" 
-                Indeterminate="HandleThirdState" />
+                Content="odpowiedz b" 
+                Checked="HandleCheck"  
+                 />
             <TextBox x:Name="textBox2" Margin="5"  Background="#ced6e0"/>
 
             <CheckBox x:Name="cb3" 
-                Content="odpowiedz c" IsThreeState="True"
-                Checked="HandleCheck" Unchecked="HandleUnchecked" 
-                Indeterminate="HandleThirdState" />
+                Content="odpowiedz c" 
+                Checked="HandleCheck"  
+                 />
             <TextBox x:Name="textBox3" Margin="5"  Background="#ced6e0"/>
 
             <CheckBox x:Name="cb4" 
-                Content="odpowiedz d" IsThreeState="True"
-                Checked="HandleCheck" Unchecked="HandleUnchecked" 
-                Indeterminate="HandleThirdState" />
+                Content="odpowiedz d" 
+                Checked="HandleCheck"  
+                 />
             <TextBox x:Name="textBox4" Margin="5"  Background="#ced6e0"/>
 
             <TextBlock TextAlignment="Center">za pomocą checkboxa zaznacz poprawne odpowiedzi</TextBlock>

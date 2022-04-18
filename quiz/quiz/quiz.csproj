@@ -6,4 +6,11 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="WindowAddQuiz\" />
+    <Folder Include="konwertery - kopiować %283%29\" />
+    <Folder Include="WindowAddQestion\" />
+    <Folder Include="konwertery\" />
+  </ItemGroup>
+
 </Project>
