@@ -1,0 +1,95 @@
+﻿<Window x:Class="quiz_projekt.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:quiz_projekt"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" ></RowDefinition>
+            <RowDefinition Height="9*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Background="#70a1ff" >
+            <Button x:Name="buttonsave"  Margin="7 7" Padding="20 2" Content="zapisz" Click="buttonsave_Click" Background="#7bed9f"/>
+            <Button x:Name="buttonload"  Margin="7 7" Padding="20 2" Content="Wczytaj plik" Click=" buttonload_Click" Background="#7bed9f"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="1" Background="#70a1ff">
+            <StackPanel HorizontalAlignment="Center">
+                <TextBlock>lista quizów</TextBlock>
+            </StackPanel>
+            <ListBox x:Name="listBoxquizy" Grid.Column="1" Grid.Row="0" Margin="10" Background="#dfe4ea" SelectionChanged="Quizy_SelectionChanged"/>
+            <StackPanel HorizontalAlignment="Center">
+                <TextBlock>lista pytań w danym quizie</TextBlock>
+            </StackPanel>
+            <ListBox x:Name="listBoxPytania" Grid.Column="1" Margin="10" Background="#dfe4ea" SelectionChanged="Pytania_SelectionChanged"/>
+
+            <StackPanel Orientation="Horizontal">
+            <TextBlock Margin="5px">Nazwa quizu</TextBlock>
+                <TextBox Name="quiz" GotFocus="quiz_GotFocus" TextChanged="quiz_TextChanged" Margin="5" Width="292px" Background="#eccc68"/>
+                
+            </StackPanel>
+            <Button x:Name="buttonQest"  Margin="10" Padding="10" Content="Doadaj nowy quiz" Click="buttonQest_Click" Background="#eccc68"/>
+            <Button x:Name="buttonQestDel"  Margin="10" Padding="10" Content="Usuń quiz" Click="buttonQestDel_Click" Background="#eccc68"/>
+        </StackPanel>
+        <StackPanel Grid.Column="0" Grid.Row="1" Background="#70a1ff">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Margin="5px" >Pytanie</TextBlock>
+                <TextBox Name="qestion" GotFocus="quiz_GotFocus" TextChanged="quiz_TextChanged" Margin="5" Width="330px" Background="#ced6e0"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <CheckBox x:Name="cb0"
+                    Content="odpowiedz a" 
+                    Checked="HandleCheck"  
+                    Unchecked="HandleUncheck"
+                    Margin="5px"
+                 />
+                <TextBox Name="ask1" GotFocus="quiz_GotFocus" TextChanged="quiz_TextChanged" Margin="5" Width="282px" Background="#ced6e0"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <CheckBox x:Name="cb1" 
+                Content="odpowiedz b" 
+                Checked="HandleCheck"
+                Unchecked="HandleUncheck"
+                Margin="5px"
+                 />
+                <TextBox Name="ask2" GotFocus="quiz_GotFocus" TextChanged="quiz_TextChanged" Margin="5" Width="282px" Background="#ced6e0"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <CheckBox x:Name="cb2" 
+                Content="odpowiedz c" 
+                Checked="HandleCheck" 
+                Unchecked="HandleUncheck"
+                Margin="5px"
+                 />
+                <TextBox Name="ask3" GotFocus="quiz_GotFocus" TextChanged="quiz_TextChanged" Margin="5" Width="282px" Background="#ced6e0"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <CheckBox x:Name="cb3" 
+                Content="odpowiedz d" 
+                Checked="HandleCheck"  
+                Unchecked="HandleUncheck"
+                Margin="5px"
+                 />
+                <TextBox Name="ask4" GotFocus="quiz_GotFocus" TextChanged="quiz_TextChanged" Margin="5" Width="282px" Background="#ced6e0"/>
+            </StackPanel>
+
+            <TextBlock TextAlignment="Center">za pomocą checkboxa zaznacz poprawne odpowiedzi</TextBlock>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="buttonAdd"  Margin="10" Padding="10" Content="doadaj" Click="buttonAdd_Click" Background="#7bed9f"/>
+                <Button x:Name="buttonDel"  Margin="10" Padding="10" Content="usun" Click="buttonDel_Click" Background="#ff6b81"/>
+                <Button x:Name="buttonEdit"  Margin="10" Padding="10" Content="edytuj" Click="buttonEdit_Click" Background="#a4b0be"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
