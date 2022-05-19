@@ -99,10 +99,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="model\LoadQuiz.cs" />
-    <Compile Include="model\ParseJson.cs" />
+    <Compile Include="model\DataAccess.cs" />
+    <Compile Include="model\IDataAccess.cs" />
     <Compile Include="model\quiz.cs" />
-    <Compile Include="model\save.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

@@ -16,11 +16,11 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Background="#70a1ff" >
+        <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2">
             <Button x:Name="buttonsave"  Margin="7 7" Padding="20 2" Content="zapisz" Click="buttonsave_Click" Background="#7bed9f"/>
             <Button x:Name="buttonload"  Margin="7 7" Padding="20 2" Content="Wczytaj plik" Click=" buttonload_Click" Background="#7bed9f"/>
         </StackPanel>
-        <StackPanel Grid.Column="1" Grid.Row="1" Background="#70a1ff">
+        <StackPanel Grid.Column="1" Grid.Row="1" >
             <StackPanel HorizontalAlignment="Center">
                 <TextBlock>lista quizów</TextBlock>
             </StackPanel>
@@ -38,7 +38,7 @@
             <Button x:Name="buttonQest"  Margin="10" Padding="10" Content="Doadaj nowy quiz" Click="buttonQest_Click" Background="#eccc68"/>
             <Button x:Name="buttonQestDel"  Margin="10" Padding="10" Content="Usuń quiz" Click="buttonQestDel_Click" Background="#eccc68"/>
         </StackPanel>
-        <StackPanel Grid.Column="0" Grid.Row="1" Background="#70a1ff">
+        <StackPanel Grid.Column="0" Grid.Row="1" >
             <StackPanel Orientation="Horizontal">
                 <TextBlock Margin="5px" >Pytanie</TextBlock>
                 <TextBox Name="qestion" GotFocus="quiz_GotFocus" TextChanged="quiz_TextChanged" Margin="5" Width="330px" Background="#ced6e0"/>
@@ -49,6 +49,7 @@
                     Checked="HandleCheck"  
                     Unchecked="HandleUncheck"
                     Margin="5px"
+                    Background="#ced6e0"
                  />
                 <TextBox Name="ask1" GotFocus="quiz_GotFocus" TextChanged="quiz_TextChanged" Margin="5" Width="282px" Background="#ced6e0"/>
             </StackPanel>
@@ -59,6 +60,7 @@
                 Checked="HandleCheck"
                 Unchecked="HandleUncheck"
                 Margin="5px"
+                Background="#ced6e0"
                  />
                 <TextBox Name="ask2" GotFocus="quiz_GotFocus" TextChanged="quiz_TextChanged" Margin="5" Width="282px" Background="#ced6e0"/>
             </StackPanel>
@@ -69,6 +71,7 @@
                 Checked="HandleCheck" 
                 Unchecked="HandleUncheck"
                 Margin="5px"
+                Background="#ced6e0"
                  />
                 <TextBox Name="ask3" GotFocus="quiz_GotFocus" TextChanged="quiz_TextChanged" Margin="5" Width="282px" Background="#ced6e0"/>
             </StackPanel>
@@ -79,6 +82,7 @@
                 Checked="HandleCheck"  
                 Unchecked="HandleUncheck"
                 Margin="5px"
+                Background="#ced6e0"
                  />
                 <TextBox Name="ask4" GotFocus="quiz_GotFocus" TextChanged="quiz_TextChanged" Margin="5" Width="282px" Background="#ced6e0"/>
             </StackPanel>

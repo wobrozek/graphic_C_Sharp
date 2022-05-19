@@ -21,6 +21,8 @@ namespace quiz_projekt
     /// </summary>
     public partial class MainWindow : Window
     {
+        DataAccess dane= new DataAccess(); 
+
         private List<Quiz> listaQuizow = new List<Quiz>();
         private Quiz CurrentQuiz = new Quiz();
         private Question CurrentQuestion = new Question();
@@ -209,8 +211,10 @@ namespace quiz_projekt
                     }
                     MessageBox.Show("Uzupełnij wszystkie pola");
                 }
-
-
+            }
+            else
+            {
+                MessageBox.Show("najpierw wybierz quiz lub go stwórz");
             }
         }
 
@@ -371,8 +375,6 @@ namespace quiz_projekt
 
         private void HandleCheck(object sender, RoutedEventArgs e)
         {
-            if (CurrentQuiz != null && CurrentQuiz != null)
-            {
                 var CheckBox = sender as CheckBox;
                 int n = CheckBox.Name[CheckBox.Name.Length - 1] - 48;
                 Currentcheck[n] = true;
@@ -385,36 +387,26 @@ namespace quiz_projekt
                 cb3.BorderThickness = new Thickness(0);
                 cb0.BorderBrush = Brushes.Transparent;
                 cb0.BorderThickness = new Thickness(0);
-            }
-            else
-            {
-                MessageBox.Show("nie zaznaczyłeś żadnego pytania");
-            }
         }
+
 
         private void HandleUncheck(object sender, RoutedEventArgs e)
         {
-            if (CurrentQuiz != null && CurrentQuiz != null)
-            {
-                var CheckBox = sender as CheckBox;
-                int n = CheckBox.Name[CheckBox.Name.Length - 1] - 48;
-                Currentcheck[n] = false;
-            }
-            else
-            {
-                MessageBox.Show("nie zaznaczyłeś żadnego pytania");
-            }
+            var CheckBox = sender as CheckBox;
+            int n = CheckBox.Name[CheckBox.Name.Length - 1] - 48;
+            Currentcheck[n] = false;
+
         }
 
 
         private void Window_Closed(object sender, EventArgs e)
         {
-            save.saveQuiz(listaQuizow);
+            dane.saveQuiz(listaQuizow);
         }
 
         private void buttonsave_Click(object sender, RoutedEventArgs e)
         {
-            save.saveQuiz(listaQuizow);
+             dane.saveQuiz(listaQuizow);
         }
 
         private void buttonload_Click(object sender, RoutedEventArgs e)
@@ -429,7 +421,7 @@ namespace quiz_projekt
                 string filename = dlg.FileName;
                 try
                 {
-                    Quiz nowy = new Quiz(LoadQuiz.ReadJSON(filename));
+                    Quiz nowy = new Quiz(dane.ReadJSON(filename));
                     listaQuizow.Add(nowy);
                     listBoxquizy.Items.Add(nowy);
                 }
