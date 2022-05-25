@@ -1,0 +1,6 @@
+C:\Users\wobro\PycharmProjects\graphic_C_Sharp\Total_Comander\Total_Comander\obj\Debug\netcoreapp3.1\Total_Comander.csproj.AssemblyReference.cache
+C:\Users\wobro\PycharmProjects\graphic_C_Sharp\Total_Comander\Total_Comander\obj\Debug\netcoreapp3.1\View\MainWindow.g.cs
+C:\Users\wobro\PycharmProjects\graphic_C_Sharp\Total_Comander\Total_Comander\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\wobro\PycharmProjects\graphic_C_Sharp\Total_Comander\Total_Comander\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
+C:\Users\wobro\PycharmProjects\graphic_C_Sharp\Total_Comander\Total_Comander\obj\Debug\netcoreapp3.1\Total_Comander_MarkupCompile.cache
+C:\Users\wobro\PycharmProjects\graphic_C_Sharp\Total_Comander\Total_Comander\obj\Debug\netcoreapp3.1\Total_Comander_MarkupCompile.lref
