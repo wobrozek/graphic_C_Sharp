@@ -18,11 +18,18 @@ namespace mvvm_comander.View
     /// <summary>
     /// Logika interakcji dla klasy PanelTC.xaml
     /// </summary>
-    public partial class PanelTC : UserControl
+    public sealed partial class PanelTC : UserControl
     {
+        private readonly ViewModel.PanelTCViewModel panelTCViewModel;
+
+
         public PanelTC()
         {
             InitializeComponent();
+
+            panelTCViewModel = new ViewModel.PanelTCViewModel();
+            DataContext = panelTCViewModel;
         }
     }
 }
+

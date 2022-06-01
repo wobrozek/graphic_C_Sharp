@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "rKqBAlSFclLXXJXtA4is9EbXFg/LAH5/It9Her0d9w1I6CSKIIt2Daxs7t+wGW+6JUV9T0zQ+ouos6vQS8V21Q==",
+  "dgSpecHash": "vWwSmlZBGWd1EkidIp0pIyOw7sjuPaSqf8Dh60NSH87LwCyf1/vBw/Rniphd63bHLfOykHJhRcOUiY2IvmFSlQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\wobro\\PycharmProjects\\graphic_C_Sharp\\mvvm_comander\\mvvm_comander\\mvvm_comander.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\wobro\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.39\\microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512"
+  ],
   "logs": []
 }

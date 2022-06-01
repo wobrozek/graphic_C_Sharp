@@ -23,3 +23,5 @@ C:\Users\wobro\PycharmProjects\graphic_C_Sharp\mvvm_comander\mvvm_comander\obj\D
 C:\Users\wobro\PycharmProjects\graphic_C_Sharp\mvvm_comander\mvvm_comander\obj\Debug\net5.0-windows\View\PanelTC.g.cs
 C:\Users\wobro\PycharmProjects\graphic_C_Sharp\mvvm_comander\mvvm_comander\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.cs
 C:\Users\wobro\PycharmProjects\graphic_C_Sharp\mvvm_comander\mvvm_comander\obj\Debug\net5.0-windows\View\PanelTC.baml
+C:\Users\wobro\PycharmProjects\graphic_C_Sharp\mvvm_comander\mvvm_comander\bin\Debug\net5.0-windows\Microsoft.Xaml.Behaviors.dll
+C:\Users\wobro\PycharmProjects\graphic_C_Sharp\mvvm_comander\mvvm_comander\obj\Debug\net5.0-windows\mvvm_comander.csproj.CopyComplete

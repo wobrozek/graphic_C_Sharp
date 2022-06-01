@@ -23,6 +23,7 @@ namespace mvvm_comander
         public MainWindow()
         {
             InitializeComponent();
+
         }
     }
 }

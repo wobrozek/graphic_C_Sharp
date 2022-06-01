@@ -28,7 +28,8 @@
             Padding="3px"
             VerticalAlignment="Center"
             Width="220px"
-            > c:\bin\gs\gs</TextBlock>
+            Text="{Binding CurrentPath}"
+            > </TextBlock>
     </StackPanel>
 
         <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Right">
@@ -36,10 +37,28 @@
             <ComboBox
                 Width="50px"
                 Margin="5px"
+                ItemsSource="{Binding DriversList}"
+                SelectedItem="{Binding CurrentDrive}"
                 x:Name="drives"
-             ></ComboBox>
-        </StackPanel>
+             >
+                <Behaviors:Interaction.Triggers>
+                    <Behaviors:EventTrigger 
+                        EventName="DropDownOpened"
+                        SourceObject="{Binding ElementName=driversList}"
+                        >
+                        <Behaviors:InvokeCommandAction Command="{Binding LoadDrivesCommand}"/>
+                    </Behaviors:EventTrigger>
 
+                    <Behaviors:EventTrigger
+                        EventName="SelectionChanged"
+                        SourceObject="{Binding ElementName=driversList}"
+                        >
+                        <Behaviors:InvokeCommandAction Command="{Binding SelectDriveCommand}"/>
+                    </Behaviors:EventTrigger>
+                </Behaviors:Interaction.Triggers>
+            </ComboBox>
+        </StackPanel>
+ 
         <StackPanel Orientation="Horizontal" Grid.Row="2">
             <ListBox Margin="0,5px,0,0"
             Width="280"
